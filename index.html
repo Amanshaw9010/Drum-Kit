@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: url("BG.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            border: 5px solid #00000088;
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #00000058;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
+
+        kbd {
+            font-size: 2.2rem;
+        }
+
+        p {
+            color: #d9c933;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" data-key="65" id="key">
+            <kbd>A</kbd>
+            <p>Clap</p>
+            <audio src="./song/song1.mp4" id="song1"></audio>
+        </div>
+        <div class="box" data-key="66" id="key">
+            <kbd>S</kbd>
+            <p>Hihat</p>
+            <audio src="./song/song2.mp4" id="song2"></audio>
+        </div>
+        <div class="box" data-key="70" id="key3">
+            <kbd>D</kbd>
+            <p>Kick</p>
+            <audio src="./song/song3.mp4" id="song3"></audio>
+        </div>
+        <div class="box" id="key">
+            <kbd>F</kbd>
+            <p>OpenHat</p>
+            <audio src="./song/song4.mp4" id="song4"></audio>
+        </div>
+        <div class="box" id="key">
+            <kbd>G</kbd>
+            <p>Boom</p>
+            <audio src="./song/song5.mp4" id="song5"></audio>
+        </div>
+        <div class="box" id="key">
+            <kbd>H</kbd>
+            <p>Ride</p>
+            <audio src="./song/song6.mp4" id="song6"></audio>
+
+        </div>
+        <div class="box" id="key">
+            <kbd>J</kbd>
+            <p>Snare</p>
+            <audio src="./song/song7.mp4" id="song7"></audio>
+        </div>
+        <div class="box" id="key">
+            <kbd>K</kbd>
+            <p>Tom</p>
+            <audio src="./song/song8.mp4" id="song8"></audio>
+        </div>
+        <div class="box" id="key">
+            <kbd>L</kbd>
+            <p>Tink</p>
+            <audio src="./song/song9.mp4" id="song9"></audio>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        let key3 = document.getElementById("key3");
+        let song1 = document.getElementById("song1");
+        let song2 = document.getElementById("song2");
+        let song3 = document.getElementById("song3");
+        let song4 = document.getElementById("song4");
+        let song5 = document.getElementById("song5");
+        let song6 = document.getElementById("song6");
+        let song7 = document.getElementById("song7");
+        let song8 = document.getElementById("song8");
+        let song9 = document.getElementById("song9");
+
+
+        document.addEventListener('keydown', function (e) {
+            if (e.keyCode == 65) {
+                song1.play();
+            } else if (e.keyCode == 83) {
+                song3.play();
+            }
+            else if (e.keyCode == 68) {
+                song2.play();
+            }
+            else if (e.keyCode == 70) {
+                song4.play();
+            }
+            else if (e.keyCode == 71) {
+                song5.play();
+            }
+            else if (e.keyCode == 72) {
+                song6.play();
+            }
+            else if (e.keyCode == 74) {
+                song7.play();
+            }
+            else if (e.keyCode == 75) {
+                song8.play();
+            }
+            else if (e.keyCode == 76) {
+                song9.play();
+            }
+
+
+            if (e.keyCode != 65) {
+                song1.currentTime = 0;
+            }
+            else if (e.keyCode != 83) {
+                song3.currentTime = 0;
+            }
+            else if (e.keyCode != 68) {
+                song2.currentTime = 0;
+            }
+            else if (e.keyCode != 70) {
+                song4.currentTime = 0;
+            }
+            else if (e.keyCode != 71) {
+                song5.currentTime = 0;
+            }
+            else if (e.keyCode != 72) {
+                song6.currentTime = 0;
+            }
+            else if (e.keyCode != 74) {
+                song7.currentTime = 0;
+            }
+            else if (e.keyCode != 75) {
+                song8.currentTime = 0;
+            }
+            else if (e.keyCode != 76) {
+                song9.currentTime = 0;
+            }
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
